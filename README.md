@@ -43,4 +43,28 @@ python agents/run_bug_supervision.py
 python run_bug_supervision.py java_programs
 
 Run the pipeline: py agents/run_bug_supervision.py
+-------------------OR--------------------
+
+QuixBugs/
+│
+├── Agents/
+│   ├── run_bug_supervision.py
+│   ├── bug_detection_agent.py
+│   ├── supervisor_agent.py
+│   ├── bug_fix_agent.py
+│   ├── unit_test_evaluation_agent.py
+│   └── git_push_agent.py
+│
+├── python_programs/        # Buggy programs
+├── python_testcases/       # Unit tests
+├── requirements.txt
+└── README.md
+
+git clone https://github.com/<your-username>/QuixBugs.git
+cd QuixBugs
+
+python -m venv .venv
+.venv\Scripts\activate
+
+py -m Agents.run_bug_supervision path/to/programs
 
